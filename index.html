@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liver Health Diagnostic Tool</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Liver Health Diagnostic Tool</h1>
+        </header>
+        <main>
+            <section id="landing" class="active">
+                <h2>Welcome to the Liver Health Diagnostic Tool</h2>
+                <p>This tool helps assess your risk for chronic and non-chronic liver diseases. Answer a series of questions to receive a personalized risk assessment and recommendations.</p>
+                <form id="name-form">
+                    <div class="input-group">
+                        <label for="user-name">Please enter your full name:</label>
+                        <input type="text" id="user-name" name="user-name" required>
+                    </div>
+                    <br>
+                    <button type="submit" id="start-quiz">Start Assessment</button>
+                </form>
+            </section>
+            <section id="questionnaire" class="hidden">
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <form id="quiz-form">
+                    <fieldset>
+                        <legend>Question <span id="question-number">1</span></legend>
+                        <div id="question-text"></div>
+                        <div id="answer-options"></div>
+                    </fieldset>
+                    <div class="navigation">
+                        <button type="button" id="prev-question" class="hidden">Back</button>
+                        <button type="button" id="next-question">Next</button>
+                    </div>
+                </form>
+            </section>
+            <section id="results" class="hidden">
+                <h2>Your Liver Health Assessment Results</h2>
+                <div id="user-greeting"></div>
+                <div id="risk-level"></div>
+                <div id="confidence-score"></div>
+                <div id="key-symptoms"></div>
+                <div id="recommendations"></div>
+                <button id="restart-quiz">Restart Assessment</button>
+                <button id="print-results">Print Results</button>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Machine learning system for diagnosing chronic and non-chronic liver disease - Abubakar Mohammed Mansur</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="icon-liver" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+        </symbol>
+        <symbol id="icon-check" viewBox="0 0 24 24">
+            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+        </symbol>
+    </svg>
+</body>
+</html>
